@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskriti Dharohar - India's Religious Heritage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <img src="./public/WhatsApp Image 2025-07-08 at 20.46.43_4b635fb0.jpg" alt="Sanskriti Dharohar Logo" />
+                </div>
+                <div class="logo-text">
+                    <h1>Sanskriti</h1>
+                    <span>DHAROHAR</span>
+                </div>
+            </div>
+            
+            <div class="nav-categories">
+                <button class="nav-btn active" data-category="all">All</button>
+                <button class="nav-btn" data-category="temple">Temple</button>
+                <button class="nav-btn" data-category="mosque">Mosque</button>
+                <button class="nav-btn" data-category="church">Church</button>
+                <button class="nav-btn" data-category="gurudwara">Gurudwara</button>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Hero Section -->
+        <section id="heroSection" class="hero">
+            <div class="hero-content">
+                <div class="hero-icon">
+                    <img src="./public/WhatsApp Image 2025-07-08 at 20.46.43_4b635fb0.jpg" alt="Sanskriti Dharohar Logo" />
+                </div>
+                <h1 class="hero-title">Sanskriti</h1>
+                <p class="hero-subtitle">DHAROHAR</p>
+                <p class="hero-description">
+                    Discover India's rich religious heritage. Explore temples, mosques, churches, 
+                    and gurudwaras across different states with detailed information and beautiful imagery.
+                </p>
+            </div>
+        </section>
+
+        <!-- States Grid -->
+        <section id="statesSection" class="states-section">
+            <div class="container">
+                <h2 class="section-title">Explore by State & Union Territory</h2>
+                <div id="statesGrid" class="states-grid">
+                    <!-- States will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- State Detail Section -->
+        <section id="stateDetailSection" class="state-detail hidden">
+            <div class="container">
+                <button id="backToStates" class="back-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="m12 19-7-7 7-7"></path>
+                        <path d="M19 12H5"></path>
+                    </svg>
+                    Back to States
+                </button>
+                
+                <div class="state-header">
+                    <h2 id="stateTitle"></h2>
+                    <p id="stateDescription"></p>
+                </div>
+                
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="temple">Temples</button>
+                    <button class="filter-btn" data-filter="mosque">Mosques</button>
+                    <button class="filter-btn" data-filter="church">Churches</button>
+                    <button class="filter-btn" data-filter="gurudwara">Gurudwaras</button>
+                </div>
+                
+                <div id="monumentsGrid" class="monuments-grid">
+                    <!-- Monuments will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Monument Detail Section -->
+        <section id="monumentDetailSection" class="monument-detail hidden">
+            <div class="container">
+                <button id="backToMonuments" class="back-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="m12 19-7-7 7-7"></path>
+                        <path d="M19 12H5"></path>
+                    </svg>
+                    Back to Monuments
+                </button>
+                
+                <div class="monument-content">
+                    <div class="monument-left">
+                        <div id="monumentInfo" class="monument-info">
+                            <!-- Monument information will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <div class="monument-right">
+                        <div id="monumentLocation" class="monument-location">
+                            <!-- Location and additional info will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+        <!-- About Us Section -->
+        <section id="aboutSection" class="about-section hidden">
+            <div class="container">
+                <button id="backToHome" class="back-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="m12 19-7-7 7-7"></path>
+                        <path d="M19 12H5"></path>
+                    </svg>
+                    Back to Home
+                </button>
+                
+                <div class="about-content">
+                    <div class="about-header">
+                        <div class="about-icon">
+                            <img src="./public/WhatsApp Image 2025-07-08 at 20.46.43_4b635fb0.jpg" alt="Sanskriti Dharohar Logo" />
+                        </div>
+                        <h2>About Sanskriti Dharohar</h2>
+                    </div>
+                    
+                    <div class="about-text">
+                        <p>Welcome to <strong>Sanskriti Dharohar</strong> — a heartfelt digital initiative created by a group of passionate students to celebrate and preserve the spiritual and cultural soul of India.</p>
+                        
+                        <p>India is home to an extraordinary variety of religious monuments — from ancient temples and serene mosques to majestic churches and peaceful gurudwaras. With every state and union territory offering its own unique heritage, we felt inspired to bring it all together in one beautifully crafted, easy-to-use platform.</p>
+                        
+                        <p>At Sanskriti Dharohar, our goal is to make it easier for everyone — students, travelers, history lovers, and spiritual seekers — to explore these sacred spaces. We've carefully curated information for each monument, including its significance, facilities, nearby attractions, and how to reach them. All of this is presented through a clean, accessible layout that mirrors the diversity and dignity of these places.</p>
+                        
+                        <p>This project is built entirely using <strong>HTML, CSS, and JavaScript</strong> — no fancy frameworks, just thoughtful design, structured data, and a lot of love for our roots.</p>
+                        
+                        <p>We believe that heritage should be preserved, celebrated, and shared — and we're proud to contribute our small part through this platform.</p>
+                        
+                        <p class="closing-message">Thank you for visiting Sanskriti Dharohar. We hope you explore, learn, and feel a little more connected to India's timeless spirit.</p>
+                    </div>
+                    
+                    <div class="about-features">
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">🏛️</div>
+                                <h4>Comprehensive Coverage</h4>
+                                <p>Monuments across all states and union territories of India</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🔍</div>
+                                <h4>Detailed Information</h4>
+                                <p>Complete details including timings, facilities, and travel info</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🎨</div>
+                                <h4>Beautiful Design</h4>
+                                <p>Clean, accessible layout respecting cultural dignity</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">💻</div>
+                                <h4>Pure Technology</h4>
+                                <p>Built with HTML, CSS, and JavaScript - no frameworks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <img src="./public/WhatsApp Image 2025-07-08 at 20.46.43_4b635fb0.jpg" alt="Sanskriti Dharohar Logo" />
+                        </div>
+                        <div class="logo-text">
+                            <h3>Sanskriti</h3>
+                            <span>DHAROHAR</span>
+                        </div>
+                    </div>
+                    <p>Discover and explore the rich religious heritage of India. From ancient temples to historic mosques, churches, and gurudwaras.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about" id="aboutLink">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p>sanskritidharohar@gmail.com</p>
+                        <p>+91 98765 43210</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sanskriti Dharohar. All rights reserved. Preserving India's spiritual heritage.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
